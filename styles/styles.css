@@ -1,0 +1,308 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pastikan seluruh halaman terisi */
+}
+
+/* Header Styles */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .logo-container img {
+  max-height: 80px;
+}
+
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.main-navigation ul li {
+  margin-left: 1rem;
+}
+
+.main-navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.main-navigation ul li a:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Button Styles */
+.btn-primary, .btn-secondary {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;  /* Pastikan tombol tampil sebagai inline-block */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  margin: 10px 0; /* Memberikan margin atas dan bawah pada tombol */
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+  color: #0066cc;
+}
+
+/* Disabled State for Buttons */
+.btn-primary:disabled, .btn-secondary:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Optional: Small tweak to make buttons align nicely on smaller screens */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    width: 100%;  /* Tombol akan mengambil lebar penuh pada perangkat kecil */
+    padding: 12px; /* Padding lebih kecil pada layar kecil */
+  }
+}
+
+/* Main Content */
+main {
+  flex: 1; /* Membuat main mengambil sisa ruang setelah header */
+  padding-top: 80px; /* Memberikan ruang untuk header fixed */
+  width: 100%;
+  max-width: 1200px; /* Membatasi lebar agar tidak terlalu lebar */
+  margin: 0 auto; /* Memastikan konten utama di tengah */
+  padding: 20px; /* Memberikan sedikit ruang di dalam konten */
+  box-sizing: border-box;
+  background-color: #fff; /* Latar belakang putih */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Menambahkan bayangan */
+}
+
+/* Container for Content */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Membatasi lebar container */
+  margin: 0 auto; /* Memastikan container berada di tengah */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #333;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px 0;
+  display: inline-block;
+  transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.footer-section li a:hover {
+  color: #4CAF50;
+  padding-left: 10px;
+}
+
+
+.social-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+}
+
+.copyright {
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial-author {
+  display: block;
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Contact Page Styles */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form .error {
+  color: red;
+  font-size: 0.8em;
+}
+
+/* FAQ Page Styles */
+.faq-content details {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.faq-content summary {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-content details p {
+  padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .site-header {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .main-navigation ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-navigation ul li {
+      margin: 0.5rem 0;
+  }
+
+  .footer-content {
+      flex-direction: column;
+  }
+}
+
+/* Performance Optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Accessibility */
+a:focus, 
+button:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}

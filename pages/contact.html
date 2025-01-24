@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - P4 Jakarta Timur</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/js/include.js"></script>
+    <script src="/js/navigation.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>Hubungi Kami</h1>
+            <p>Kami siap membantu Anda dengan pertanyaan atau informasi lebih lanjut. Silakan isi formulir di bawah atau hubungi kami langsung melalui informasi kontak berikut.</p>
+        </section>
+
+        <!-- Informasi Kontak dan Lokasi -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-details">
+                    <div class="contact-method">
+                        <h2>Informasi Kontak</h2>
+                        <p><strong>Alamat:</strong> Jalan Koordinasi No. 12, Jakarta Timur</p>
+                        <p><strong>Telepon:</strong> <a href="tel:+621234567">+62 21 234 567</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@p4juks.com">info@p4juks.com</a></p>
+                    </div>
+
+                    <!-- Interaktif Map Section -->
+                    <div class="contact-map">
+                        <h2>Lokasi Kami</h2>
+                        <!-- Peta interaktif Google Maps -->
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12627.444003992374!2d106.8766041379878!3d-6.292343347051632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5b62c6b0e3b%3A0x1f577139af708589!2sP4%20Kota%20Administrasi%20Jakarta%20Timur!5e0!3m2!1sid!2sid!4v1681998968237!5m2!1sid!2sid" 
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulir Kontak -->
+        <section class="contact-form">
+            <div class="container">
+                <h2>Kirim Pesan</h2>
+                <form id="contact-form" method="post" action="/submit-form">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required>
+                        <span id="name-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span id="email-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
